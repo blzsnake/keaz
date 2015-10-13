@@ -1,38 +1,48 @@
 .menu
-  width: 100%
-  font-size 0
-  position relative
-  text-align center
-  margin 0 31px
-.menu__item
-  display inline-block
-  background-color $kz-blue
-  border-right $kz-blue-lt 1px solid
-  border-bottom 3px solid $kz-blue-dk
-  height: 47px
-  box-shadow 0 15px 30px 0 rgba(50,50,50,0.35)
-.menu__link
-  text-decoration none
-  display inline-block
-  margin: 15px 60px
-  font-size 15px
-  color $kz-white
-  border-bottom rgba(255,255,255,0.4) 1px solid
-.is-question
-  background-color $kz-grey
-  border-bottom $kz-grey-dk 3px solid
-  .menu__link
-    color $kz-black
-    border-bottom rgba(0,0,0,0.3) 1px solid
-.menu__item_type_home
-.menu__item_type_question
-  padding 15px 15px
-  position absolute
-.menu__item_type_home
-  left: 0
-  background-color $kz-orange
-  border-bottom $kz-orange-dk 3px solid
-  border-radius 0 0 0 5px
-.menu__item_type_question
-  right 0
-  border-radius 0 0 5px 0
+	margin 0 31px
+	position relative
+	width: 100%
+	font-size 0
+	text-align center
+
+	&__item
+		display inline-block
+		height 47px
+		background-color $kz-blue
+		border-right $kz-blue-lt 1px solid
+		border-bottom 3px solid $kz-blue-dk
+		box-shadow 0 15px 30px 0 rgba(50,50,50,0.35)
+
+		&.is-question
+			background-color $kz-grey
+			border-bottom rgba(0,0,0,0.3) 1px solid
+
+			& .menu__link
+				border-bottom $kz-grey-dk 3px solid
+				color $kz-black
+
+		&_type_home
+		&_type_question
+			padding 15px 15px
+			position absolute
+
+		&_type_home
+			left: 0
+			background-color $kz-orange
+			border-bottom $kz-orange-dk 3px solid
+			border-radius 0 0 0 5px
+
+		&_type_question
+			right 0
+			border-radius 0 0 5px 0
+
+
+	&__link
+		margin 15px 60px
+		display inline-block
+		text-decoration none
+		font-size 15px
+		color $kz-white
+		border-bottom rgba(255,255,255,0.4) 1px solid
+
+
