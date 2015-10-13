@@ -1,0 +1,24 @@
+[
+	{
+		"mod":"is-active",
+		"value":"Продукция",
+		"link":"test"
+	},
+	{
+		"value":"Как купить",
+		"link":"test"
+	},
+	{
+		"value":"Наш завод",
+		"link":"test"
+	},
+	{
+		"value":"Пресс центр",
+		"link":"test"
+	},
+	{
+		"mod":"is-question",
+		"value":"Задать вопрос",
+		"link":"test"
+	}
+]

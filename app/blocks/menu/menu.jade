@@ -1,0 +1,7 @@
+mixin menu(data)
+	+b.menu&attributes(attributes)
+		+e.item.menu__item_type_home
+		each item in data
+			+e.item(class = item.mod ? item.mod : '')
+				+e('a').link(href = item.link)=item.value
+		+e.item.menu__item_type_question

@@ -1,0 +1,13 @@
+include ../../../node_modules/bemto.jade/bemto.jade
+include ../row/row
+include ../col/col
+include ../menu/menu
+
+mixin ui-kit()
+	- menu = getData('menu')
+	+b.ui-kit
+		+e.row
+			+e.title Главное меню
+			+row
+				+col
+					+menu(menu)

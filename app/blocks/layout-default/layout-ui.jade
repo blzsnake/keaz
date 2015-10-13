@@ -1,0 +1,13 @@
+- var pageScripts = pageScripts || [[], [], []];
+
+include ../../../node_modules/bemto.jade/bemto.jade
+include ../scripts/scripts
+
++script([], ['app.min.js'])
+
+doctype html
+html(lang='ru')
+	include ../head/head
+	body
+		block content
+		+scripts()
