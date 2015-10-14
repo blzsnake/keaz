@@ -12,20 +12,32 @@
 		border-right $kz-blue-lt 1px solid
 		border-bottom 3px solid $kz-blue-dk
 		box-shadow 0 15px 30px 0 rgba(50,50,50,0.35)
+		transition all ease-in-out 0.2s
 
 		&:hover
 			background-color $kz-blue-lt
+			transition all ease-in-out 0.2s
 
 		&.is-question
 			background-color $kz-grey
-			border-bottom rgba(0,0,0,0.3) 1px solid
+			border-bottom $kz-grey-dk 3px solid
+			transition all ease-in-out 0.2s
+
+			&:hover
+				background-color $kz-grey-hover
+			  transition all ease-in-out 0.2s
+			
 
 			& .menu__link
-				border-bottom $kz-grey-dk 3px solid
+				border-bottom rgba(0,0,0,0.3) 1px solid
 				color $kz-black
 
 		&.is-active
 			background-color $kz-orange
+			border-bottom 3px solid $kz-orange-dk
+
+			&:hover
+				background-color $kz-orange-lt
 
 		&_type_home
 		&_type_question
@@ -34,8 +46,6 @@
 
 		&_type_home
 			left: 0
-			background-color $kz-orange
-			border-bottom $kz-orange-dk 3px solid
 			border-radius 0 0 0 5px
 
 		&_type_question
