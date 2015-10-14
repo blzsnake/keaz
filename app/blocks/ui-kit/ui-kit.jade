@@ -2,12 +2,29 @@ include ../../../node_modules/bemto.jade/bemto.jade
 include ../row/row
 include ../col/col
 include ../menu/menu
+include ../logo/logo
+include ../btn/btn
 
 mixin ui-kit()
 	- menu = getData('menu')
 	+b.ui-kit
 		+e.row
-			+e.title Главное меню
+			+e.title Main menu
 			+row
 				+col
 					+menu(menu)
+		+e.row
+			+e.title Logo
+			+row
+				+col
+					+logo('assets/images/logo.png')(class='logo_size_big')
+				+col
+					+logo('assets/images/logo_middle.png')(class='logo_size_middle')
+
+		+e.row
+			+e.title Button
+			+row
+				+col
+					+btn({'href':'test', 'value':'Войти'})
+				+col
+					+btn({'href':'test', 'value':'Подбор по аналогам'})
