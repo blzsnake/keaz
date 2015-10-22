@@ -1,0 +1,11 @@
+mixin main-slider()
+
+	- data = getData('main-slider') || []
+
+	+b.main-slider#mainSlider
+
+		each item in data
+			+e.item
+				+e('h4').title= item.text
+				+e.image(src=item.src)
+

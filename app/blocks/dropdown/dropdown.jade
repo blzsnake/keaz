@@ -1,0 +1,29 @@
+mixin dropdown(data,icon)
+
+	- data = data || {}
+	- icon = data.icon || {}
+
+	+b.dropdown(class={
+			'dropdown_type_round': data.mod === 'round',
+			'dropdown_icon_left': icon.pos === 'left',
+			'dropdown_icon_right': icon.pos === 'right',
+			'dropdown_icon_right dropdown_icon_left': icon.pos === 'both'
+	})&attributes(attributes)
+		+e.text(class={
+			'dropdown__text_dashed': data.type === 'dashed',
+			'dropdown__text_solid': data.type === 'solid'
+		})= data.text
+		+e.icon(class={
+			'dropdown__icon_type_city' : icon.type === 'city',
+			'dropdown__icon_type_angle-black' : icon.type === 'angle-black',
+			'dropdown__icon_type_angle-grey' : icon.type === 'angle-grey',
+			'dropdown__icon_type_angle-white' : icon.type === 'angle-white'
+			})
+
+		if icon.type2 != undefined
+			+e.icon(class={
+				'dropdown__icon_type_city' : icon.type2 === 'city',
+				'dropdown__icon_type_angle-black' : icon.type2 === 'angle-black',
+				'dropdown__icon_type_angle-grey' : icon.type2 === 'angle-grey',
+				'dropdown__icon_type_angle-white' : icon.type2 === 'angle-white'
+				})

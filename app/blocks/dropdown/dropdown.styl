@@ -1,0 +1,69 @@
+.dropdown
+	position relative
+	display inline-block
+	cursor pointer
+
+	&_icon_left
+		padding-left 15px
+
+	&_icon_right
+		padding-right 20px
+
+	&_type_round
+		margin-left -4px
+		padding 0 14px
+		height 25px
+		line-height 23px
+		display inline-block
+		color $kz-orange
+		border 1px solid $kz-grey-dk
+		border-radius 12px
+		background-color $kz-orange
+		border-top-left-radius 0
+		border-bottom-left-radius 0
+		border-left-color #fff
+
+	&__text
+		font-size 12px
+
+		&_dashed
+			border-bottom 1px dashed $kz-black
+
+		&_solid
+			border-bottom 1px solid $kz-black
+
+	&__icon
+		position absolute
+
+		&_type_angle-grey
+			top 1px
+			right 5px
+			size 8px
+			border-right 2px solid $kz-grey-dk
+			border-bottom 2px solid $kz-grey-dk
+			transform rotate(45deg)
+
+		&_type_angle-black
+			top 0
+			right 2px
+			size 9px
+			border-right 2px solid $kz-black
+			border-bottom 2px solid $kz-black
+			transform rotate(45deg)
+
+		&_type_angle-white
+			top 4px
+			right 10px
+			size 9px
+			border-right 2px solid $kz-white
+			border-bottom 2px solid $kz-white
+			transform rotate(45deg)
+
+		&_type_city
+			top 0
+			left 0
+			size 15px
+			background-repeat no-repeat
+			background-size 11px 16px
+			background-color $kz-blue
+

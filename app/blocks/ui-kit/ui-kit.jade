@@ -4,6 +4,9 @@ include ../col/col
 include ../menu/menu
 include ../logo/logo
 include ../btn/btn
+include ../dropdown/dropdown
+include ../brand-filter/brand-filter
+include ../title/title
 
 mixin ui-kit()
 	- menu = getData('menu')
@@ -29,6 +32,77 @@ mixin ui-kit()
 			+e.title Button
 			+row
 				+col
-					+btn({'href':'test', 'value':'Войти'})
+					+btn({href:jv0, value:'Войти'})
 				+col
-					+btn({'href':'test', 'value':'Подбор по аналогам'})
+					+btn({href:jv0, value:'Подбор по аналогам'})
+				+col
+					+btn({href:jv0, value:'Корзина (0)', mod:'_round'})
+					+dropdown({
+						mod:'round',
+						text: '.',
+						icon: {
+							type:'angle-white'
+							}
+						})
+		+e.row
+			+e.title Dropdown
+			+row
+				+col
+					+dropdown({
+						type:'dashed',
+						text:'Москва',
+						icon: {
+							pos:'both',
+							type:'angle-grey',
+							type2:'city'
+							}
+						})
+				+col
+					+dropdown({
+						mod:'round',
+						text:'.',
+						icon: {
+							type:'angle-white'
+							}
+						})
+				+col
+					+dropdown({
+						type:'dashed',
+						text:'Прайс-листы',
+						icon: {
+							pos:'right',
+							type:'angle-grey'
+							}
+						})
+				+col
+					+dropdown({
+						type:'dashed',
+						text:'Контакты',
+						icon: {
+							pos:'right',
+							type:'angle-grey'
+							}
+						})
+				+col
+					+dropdown({
+						type:'solid',
+						text:'Все сферы применения',
+						icon: {
+							pos:'right',
+							type:'angle-black'
+							}
+						})
+
+		+e.row
+			+e.title UI-Components
+			+row
+				+col
+					+brand-filter
+
+		+e.row
+			+e.title Titles
+			+row
+				+col
+					+title({tag:'h1', val:'Продукция'})
+				+col
+					+title({tag:'h3', val:'Новости', mod:'small'})

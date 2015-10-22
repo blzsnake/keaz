@@ -58,7 +58,7 @@
     "gulp-html-prettify": "0.0.1",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^0.6.2",
-    "gulp-jade": "^0.6.1",
+    "gulp-jade": "^1.1.0",
     "gulp-jade-inheritance": "^0.5.0",
     "gulp-minify-css": "^0.3.13",
     "gulp-plumber": "^0.6.6",
@@ -74,6 +74,7 @@
     "require-dir": "^0.1.0",
     "run-sequence": "^1.0.2",
     "rupture": "^0.6.1",
+    "slick-carousel": "^1.5.8",
     "svg4everybody": "jonathantneal/svg4everybody",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
@@ -82,7 +83,7 @@
     "android": 4,
     "chrome": 42,
     "firefox": 37,
-    "ie": 10,
+    "ie": 9,
     "ios": 7,
     "opera": 28,
     "safari": 7

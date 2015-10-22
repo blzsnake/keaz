@@ -1,0 +1,26 @@
+.brand-filter
+	font-size 0
+
+	&__item
+		padding 5px 10px
+		display inline-block
+		font-size 13px
+		border 1px solid $kz-grey-dk
+		cursor pointer
+
+		&.is-active
+		&:active
+			color $kz-white
+			background-color $kz-orange
+			box-shadow rgba(0,0,0,0.5) 0 2px 2px inset
+
+		&_all
+			border-right none
+			border-top-left-radius 12px
+			border-bottom-left-radius 12px
+
+		&_optima
+			border-left none
+			border-top-right-radius 12px
+			border-bottom-right-radius 12px
+

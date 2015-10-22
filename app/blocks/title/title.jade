@@ -1,0 +1,6 @@
+mixin title(data)
+	-data = data || {}
+
+	+b(data.tag).title(class={
+		'title_size_small': data.mod === 'small'
+		})&attributes(attributes)= data.val
