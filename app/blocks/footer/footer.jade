@@ -9,7 +9,7 @@ mixin footer()
 					p='Подпишись на новости КЭАЗ'
 					input(type='email' placeholder='e-mail')
 					button(type='submit')='Подписаться'
-			+e.block
+			+e.block._center
 				+e.section._sitemap
 					+b.footer__list
 						+e('p').title
@@ -67,21 +67,29 @@ mixin footer()
 								+e#google_translate_element='Google'
 				+e.section._social					
 					+b('a').social__link.social__link_vk(href = '#')
-						i.fa.fa-vk.fa-2x
+						+e('span')
+							i.fa.fa-vk.fa-2x
 					+b('a').social__link.social__link_facebook(href = '#')
-						i.fa.fa-facebook.fa-2x
+						+e('span')
+							i.fa.fa-facebook.fa-2x
 					+b('a').social__link.social__link_instagram(href = '#')
-						i.fa.fa-instagram.fa-2x
+						+e('span')
+							i.fa.fa-instagram.fa-2x
 					+b('a').social__link.social__link_twitter(href = '#')
-						i.fa.fa-twitter.fa-2x
+						+e('span')
+							i.fa.fa-twitter.fa-2x
 					+b('a').social__link.social__link_youtube(href = '#')
-						i.fa.fa-youtube.fa-2x
+						+e('span')
+							i.fa.fa-youtube.fa-2x
 					+b('a').social__link.social__link_gplus(href = '#')
-						i.fa.fa-google-plus.fa-2x
+						+e('span')
+							i.fa.fa-google-plus.fa-2x
 					+b('a').social__link.social__link_odnoklassniki(href = '#')
-						i.fa.fa-odnoklassniki.fa-2x
+						+e('span')
+							i.fa.fa-odnoklassniki.fa-2x
 					+b('a').social__link.social__link_rss(href = '#')
-						i.fa.fa-rss.fa-2x
+						+e('span')
+							i.fa.fa-rss.fa-2x
 			+e.block
 				+e.section._cc
 					p Вся представленная на сайте информация, касающаяся технических характеристик, наличия на складе, стоимости товаров, носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.
@@ -98,7 +106,8 @@ mixin footer()
 					p keaz.ru
 				+e.section._buymap
 					a(href = '#')
-						img(src="https://keaz.ru/coding/img/allrus.png", alt="")
-						p Мы работаем по всей России и странам СНГ
-						img(src="https://keaz.ru/coding/img/secure.png", alt="")
+						img.russia-map(src="https://keaz.ru/coding/img/allrus.png")
+						p.russia-map_descr Мы работаем по всей России и странам СНГ
+					p.comodo_age
+						img.comodo(src="https://keaz.ru/coding/img/secure.png")
 						span 18+
