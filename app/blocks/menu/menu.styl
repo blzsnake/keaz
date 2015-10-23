@@ -19,12 +19,13 @@
 
 		&.is-question
 			background-color $kz-grey
+			border-right $kz-grey-lt 1px solid
 			border-bottom $kz-grey-dk 3px solid
 			transition all ease-in-out 0.2s
 
 			&:hover
 				background-color $kz-grey-hover
-			  transition all ease-in-out 0.2s
+			  	transition all ease-in-out 0.2s
 
 
 			& .menu__link
@@ -37,11 +38,15 @@
 
 			&:hover
 				background-color $kz-orange-lt
+				
+			& .menu__link
+				border-bottom 1px solid transparent
 
 		&_type_home
 		&_type_question
-			padding 15px 15px
-			position absolute
+			padding 15px 0
+			vertical-align top
+			width 28px
 
 		&_type_home
 			left: 0
@@ -59,5 +64,7 @@
 		font-size 15px
 		color $kz-white
 		border-bottom rgba(255,255,255,0.4) 1px solid
-
-
+		
+		&_ico
+			margin 0
+			

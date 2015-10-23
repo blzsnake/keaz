@@ -1,7 +1,11 @@
 mixin menu(data)
 	+b.menu&attributes(attributes)
-		+e.item.menu__item_type_home
+		+e.item.menu__item_type_home(href='#')
+			+e('span').link._ico
+				<i class="fa fa-home"></i>
 		each item in data
 			+e.item(href = item.link class = item.mod ? item.mod : '')
 				+e('span').link=item.value
-		+e.item.menu__item_type_question
+		+e.item.menu__item_type_question(href='#')
+			+e('span').link._ico
+				<i class="fa fa-question"></i>
