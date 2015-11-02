@@ -11,7 +11,8 @@ mixin dropdown(data,icon)
 	})&attributes(attributes)
 		+e.text(class={
 			'dropdown__text_dashed': data.type === 'dashed',
-			'dropdown__text_solid': data.type === 'solid'
+			'dropdown__text_solid': data.type === 'solid',
+			'dropdown__text_blue' : data.type === 'blue'
 		})= data.text
 		+e.icon(class={
 			'dropdown__icon_type_city' : icon.type === 'city',

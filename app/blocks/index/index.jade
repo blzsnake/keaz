@@ -3,15 +3,59 @@ include ../col/col
 include ../menu/menu
 include ../logo/logo
 include ../btn/btn
+include ../link/link
+include ../content/content
+include ../aside/aside
 include ../dropdown/dropdown
 include ../brand-filter/brand-filter
 include ../title/title
+include ../fake/fake
+include ../brand-post/brand-post
+include ../filter/filter
 include ../main-slider/main-slider
 include ../under-slider/under-slider
+include ../new-slider/new-slider
+include ../categories/categories
 include ../footer/footer
 
 
 mixin index()
-	+row(class='row_header_top')
+	- dataCat = getData('categories') || []
+
+	+row
 		+main-slider
 		+under-slider
+	+row
+		+content
+			+col(class='col_size_half')
+				+title({tag:'h1', val:'Продукция'})
+			+col(class='col_size_half col_txt_right')
+				+link(['#','Ссылка1'])
+				+link(['#','Ссылка2'])
+				+link(['#','Ссылка3'])
+				+dropdown({
+						type:'blue',
+						text:'Ещё',
+						icon: {
+							pos:'right',
+							type:'angle-grey'
+							}
+						})
+			+col(class='col_size_full')
+				+filter
+			+col(class='col_size_full')
+				+title({tag:'h3', val:'Категории', mod:'small'})
+			+col
+				+categories(dataCat[0])
+				+categories(dataCat[1])
+
+		+aside
+			+col(class='col_size_full')
+				+title({tag:'h3', val:'Новинки', mod:'small'})(class='title_color_blue')
+				+new-slider
+				+fake
+				+title({tag:'h3', val:'О наших брендах', mod:'small'})
+				+brand-post
+
+
+

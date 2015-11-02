@@ -1,0 +1,22 @@
+include ../dropdown/dropdown
+include ../brand-filter/brand-filter
+
+mixin filter()
+	.filter
+		+brand-filter
+		+dropdown({
+			type:'dashed',
+			text:'Сферы применения',
+			icon: {
+				pos:'right',
+				type:'angle-grey'
+				}
+			})
+		+dropdown({
+			type:'dashed',
+			text:'Функции оборудования',
+			icon: {
+				pos:'right',
+				type:'angle-grey'
+				}
+			})

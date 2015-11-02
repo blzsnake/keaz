@@ -11,7 +11,7 @@ mixin header()
 	- menu = getData('menu')
 
 	+b('header').header
-		+row()(class='row_header_top')
+		+row
 			+e.logo
 				+logo('assets/images/logo.png')(class='logo_size_big')
 			+e.city
@@ -51,7 +51,7 @@ mixin header()
 							type:'angle-grey'
 							}
 						})
-					+e.tel
-						+tel({link: '+74712399911', number:'+7 4712 399-911', text: 'Бесплатно позвонить с сайта'})
+			+e.tel
+				+tel({link: '+74712399911', number:'+7 4712 399-911', text: 'Бесплатно позвонить с сайта'})
 		+row()(class='row_header_menu')
 			+menu(menu)
