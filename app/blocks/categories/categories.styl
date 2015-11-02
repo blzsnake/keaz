@@ -1,0 +1,35 @@
+.categories
+	margin-right 20px
+	padding-bottom 20px
+	display inline-block
+	font-size 14px
+
+	&__item
+		margin-top 20px
+
+	&__link
+		position relative
+		padding-left 25px
+		text-decoration none
+		color $kz-blue-lt
+
+	&__icon
+		position absolute
+		left 0
+		top -3px
+		size 18px
+		border-radius 50%
+		background-color $kz-grey-lt
+		box-shadow 0px 1px 0 0 $kz-grey-dk
+
+
+		&::before
+			position absolute
+			top 19%
+			left 28%
+			size 6px
+			border-right 2px solid $kz-grey-dk
+			border-bottom 2px solid $kz-grey-dk
+			transform rotate(45deg)
+			content ''
+

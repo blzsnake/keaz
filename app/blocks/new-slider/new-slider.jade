@@ -1,0 +1,15 @@
+mixin new-slider()
+
+	- data = getData('new-slider') || []
+
+	+b.new-slider
+		+e.arrow._next
+		+e.arrow._prev
+		+e.container#newSlider
+			each item in data
+				+e.item
+					+e('img').image(src=item.img)
+					+e('a').text= item.text
+						+e.price= item.price
+
+

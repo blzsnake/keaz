@@ -1,6 +1,167 @@
 .footer
-	padding-top 30px
+	margin-top 50px
 	border-radius 0 0 4px 4px
+	background-color $kz-grey
 
-	&__copyright
-		padding 20px
+	&__wrapper
+		max-width 1200px
+		margin 0 auto
+
+	&__block
+		font-size 0
+
+		&_center
+			border-bottom 1px solid black
+			margin-bottom 15px
+			padding 40px 0 20px
+
+	&__section
+		display inline-block
+		vertical-align top
+		font-size 12px
+		line-height 1.7em
+		input
+			padding 5px 10px 5px 30px
+			border 0
+		button
+			padding 5px
+			border 0
+			margin-left -15px
+			color $kz-white
+			transition all .3s ease-in-out
+			&:hover
+				box-shadow 2.5px 4.33px 16px 0px rgba(255,255,255,0.92)
+				transition all .3s ease-in-out
+
+		&_search
+			width 50%
+			padding 12px
+			background $kz-footer-search
+			box-shadow 2.5px 4.33px 16px 0px rgba(255,255,255,0.92)
+			input
+				width 80%
+			button
+				width 15%
+				background $kz-blue
+
+		&_subscribe
+			width 50%
+			padding 12px
+			background $kz-footer-subscribe
+			box-shadow 2.5px 4.33px 16px 0px rgba(255,255,255,0.92)
+			p
+				display inline-block
+				font-size 12px
+				font-weight 700
+				margin-right 2%
+			input
+				width 54%
+			button
+				width 16%
+				background $kz-orange
+
+		&_sitemap
+			width 78%
+			vertical-align top
+
+			.footer__list
+				display inline-block
+				vertical-align top
+				margin-right 45px
+				font-size 12px
+
+				.footer__title
+					font-weight 700
+
+				.footer__item
+
+				.footer__link
+					text-decoration none
+					color #000
+					transition all .3s ease-in-out
+					&:hover
+						color $kz-orange
+						transition all .3s ease-in-out
+
+
+
+		&_social
+			width 20%
+			font-size 0
+
+			.social__link
+				display inline-block
+				width 50px
+				height 50px
+				padding 12px 0
+				margin 0 10px 10px 0
+				font-size 12px
+				text-align center
+				color $kz-white
+
+				&:hover
+					box-shadow 2.5px 4.33px 16px 0px #fff
+
+				&_vk
+					background $kz-social-vk
+
+				&_facebook
+					background $kz-social-fb
+
+				&_instagram
+					background $kz-social-insta
+
+				&_twitter
+					background $kz-social-tw
+
+				&_youtube
+					background $kz-social-yt
+
+				&_gplus
+					background $kz-social-gp
+
+				&_odnoklassniki
+					background $kz-social-ok
+
+				&_rss
+					background $kz-social-rss
+
+		&_cc
+			width 55%
+			a
+				margin-right 5px
+				color $kz-black
+				text-decoration unde
+				&:hover
+					text-decoration none
+
+		&_adress
+			width 20%
+			margin 0 30px
+
+		&_buymap
+			width 20%
+			text-align right
+			a
+				text-decoration none
+			.russia-map
+				width 90px
+				margin-right 17px
+			.russia-map_descr
+				display inline-block
+				vertical-align top
+				width 54%
+				color $kz-black
+				text-align left
+			.comodo_age
+				margin-top 20px
+				display inline-block
+				text-align right
+			.comodo
+				width 55px
+				display block
+				margin-bottom 5px
+			span
+				background $kz-footer-subscribe
+				padding 5px
+				border-radius 3px

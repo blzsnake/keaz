@@ -2,85 +2,112 @@ mixin footer()
 	+b.footer
 		+e.wrapper
 			+e.block
-				+e.item._search
+				+e.section._search
 					input(type='search', placeholder='поиск по всему сайту')
 					button(type='submit')='Найти'
-				+e.item._subscribe
+				+e.section._subscribe
 					p='Подпишись на новости КЭАЗ'
 					input(type='email' placeholder='e-mail')
 					button(type='submit')='Подписаться'
+			+e.block._center
+				+e.section._sitemap
+					+b.footer__list
+						+e('p').title
+							+e('a').link(href='#')='Мы производим'
+						+e('ul')
+							+e('li').item
+								+e('a').link(href='#')='Автоматические выключатели'
+							+e('li').item
+								+e('a').link(href='#')='Контакторы, пускатели'
+							+e('li').item
+								+e('a').link(href='#')='Предохранители'
+							+e('li').item
+								+e('a').link(href='#')='Преобразователи частоты'
+							+e('li').item
+								+e('a').link(href='#')='Реле контроля и управления'
+					+b.footer__list
+						+e('p').title
+							+e('a').link(href='#')='Как купить'
+						+e('ul')
+							+e('li').item
+								+e('a').link(href='#')='Дилеры в вашем регионе'
+							+e('li').item
+								+e('a').link(href='#')='Региональные менеджеры'
+							+e('li').item
+								+e('a').link(href='#')='Прайс-листы'
+							+e('li').item
+								+e('a').link(href='#')='Розничный ассортимент'
+							+e('li').item
+								+e('a').link(href='#')='Направить претензию'
+					+b.footer__list
+						+e('p').title
+							+e('a').link(href='#')='Наш завод'
+						+e('ul')
+							+e('li').item
+								+e('a').link(href='#')='О продукции'
+							+e('li').item
+								+e('a').link(href='#')='Контакты и реквизиты'
+							+e('li').item
+								+e('a').link(href='#')='Интернет-магазинам'
+							+e('li').item
+								+e('a').link(href='#')='Карьера и вакансии'
+							+e('li').item
+								+e('a').link(href='#')='Патенты'
+					+b.footer__list
+						+e('p').title
+							+e('a').link(href='#')='Пресс-центр'
+						+e('ul')
+							+e('li').item
+								+e('a').link(href='#')='Новости'
+							+e('li').item
+								+e('a').link(href='#')='Осторожно, подделка!'
+							+e('li').item
+								+e('a').link(href='#')='Видео'
+							+e('li').item
+								+e#google_translate_element='Google'
+				+e.section._social
+					+b('a').social__link.social__link_vk(href = '#')
+						+e('span')
+							i.fa.fa-vk.fa-2x
+					+b('a').social__link.social__link_facebook(href = '#')
+						+e('span')
+							i.fa.fa-facebook.fa-2x
+					+b('a').social__link.social__link_instagram(href = '#')
+						+e('span')
+							i.fa.fa-instagram.fa-2x
+					+b('a').social__link.social__link_twitter(href = '#')
+						+e('span')
+							i.fa.fa-twitter.fa-2x
+					+b('a').social__link.social__link_youtube(href = '#')
+						+e('span')
+							i.fa.fa-youtube.fa-2x
+					+b('a').social__link.social__link_gplus(href = '#')
+						+e('span')
+							i.fa.fa-google-plus.fa-2x
+					+b('a').social__link.social__link_odnoklassniki(href = '#')
+						+e('span')
+							i.fa.fa-odnoklassniki.fa-2x
+					+b('a').social__link.social__link_rss(href = '#')
+						+e('span')
+							i.fa.fa-rss.fa-2x
 			+e.block
-				+e.item._sitemap
-					+b('ul').produce
-						+e('li').item._is-title='Мы производим'
-						+e('li').item='Автоматические выключатели'
-						+e('li').item='Контакторы, пускатели'
-						+e('li').item='Предохранители'
-						+e('li').item='Преобразователи частоты'
-						+e('li').item='Реле контроля и управления'
-					+b('ul').howtobuy
-						+e('li').item._is-title='Как купить'
-						+e('li').item='Дилеры в вашем регионе'
-						+e('li').item='Региональные менеджеры'
-						+e('li').item='Прайс-листы'
-						+e('li').item='Розничный ассортимент'
-						+e('li').item='Направить претензию'
-					+b('ul').factory
-						+e('li').item._is-title='Наш завод'
-						+e('li').item='О продукции'
-						+e('li').item='Контакты и реквизиты'
-						+e('li').item='Интернет-магазинам'
-						+e('li').item='Карьера и вакансии'
-						+e('li').item='Патенты'
-					+b('ul').press
-						+e('li').item._is-title='Пресс-центр'
-						+e('li').item='Новости'
-						+e('li').item='Осторожно, подделка!'
-						+e('li').item='Видео'
-						+e('li').item
-							+e.google_translate_element='Google'
-				+e.item._social
-					+b.social-button
-						+e('a').link._vk
-							+e('span').ico._vk
-					+b.social-button
-						+e('a').link._facebook
-							+e('span').ico._facebook
-					+b.social-button
-						+e('a').link._instagram
-							+e('span').ico._instagram
-					+b.social-button
-						+e('a').link._twitter(href = '#')
-							+e('span').ico._twitter
-					+b.social-button
-						+e('a').link._youtube
-							+e('span').ico._youtube
-					+b.social-button
-						+e('a').link._gplus
-							+e('span').ico._gplus
-					+b.social-button
-						+e('a').link._odnoklassniki
-							+e('span').ico._odnoklassniki
-					+b.social-button
-						+e('a').link._rss
-							+e('span').ico._rss
-			+e.block
-				+e.item._cc
+				+e.section._cc
 					p Вся представленная на сайте информация, касающаяся технических характеристик, наличия на складе, стоимости товаров, носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.
 					p При копировании и последующем использовании материалов, размещенных на сайте, ссылка на сайт keaz.ru обязательна.
 					p
 						a(href = '#') Политика конфиденциальности
 						a(href = '#') Соглашение об использовании сайта.
 					p Сайт создан в  Silver Plate
-				+e.item._adress
+				+e.section._adress
 					p Завод КЭАЗ
 					p г. Курск, ул. Луначарского, д. 8
 					p Телефон: +7 (4712) 39-99-11
 					p Мы работаем по будням с 08:30 до 17:00
 					p keaz.ru
-				+e.item._buymap
+				+e.section._buymap
 					a(href = '#')
-						img(src="https://keaz.ru/coding/img/allrus.png", alt="")
-						p Мы работаем по всей России и странам СНГ
-						img(src="https://keaz.ru/coding/img/secure.png", alt="")
+						img.russia-map(src="https://keaz.ru/coding/img/allrus.png")
+						p.russia-map_descr Мы работаем по всей России и странам СНГ
+					p.comodo_age
+						img.comodo(src="https://keaz.ru/coding/img/secure.png")
 						span 18+
