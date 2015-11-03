@@ -11,47 +11,50 @@ mixin header()
 	- menu = getData('menu')
 
 	+b('header').header
+		+row(class='row_font_null')
+			+col(class='col_size_triple')
+				+e.logo
+					+logo('assets/images/logo.png')(class='logo_size_big')
+				+e.city
+					+dropdown({
+						type:'dashed',
+						text:'Москва',
+						icon: {
+							pos:'both',
+							type:'angle-grey',
+							type2:'city'
+							}
+						})
+			+col(class='col_size_triple col_txt_center')
+				+e.enter
+					+btn({href:jv0, value:'Войти'})
+					+btn({href:jv0, value:'Корзина (0)', mod:'_round'})
+					+dropdown({
+						mod:'round',
+						text: '.',
+						icon: {
+							type:'angle-white'
+							}
+						})
+			+col(class='col_size_triple col_txt_right')
+				+e.contacts
+						+dropdown({
+							type:'dashed',
+							text:'Прайс-листы',
+							icon: {
+								pos:'right',
+								type:'angle-grey'
+								}
+							})
+						+dropdown({
+							type:'dashed',
+							text:'Контакты',
+							icon: {
+								pos:'right',
+								type:'angle-grey'
+								}
+							})
+				+e.tel
+					+tel({link: '+74712399911', number:'+7 4712 399-911', text: 'Бесплатно позвонить с сайта'})
 		+row
-			+e.logo
-				+logo('assets/images/logo.png')(class='logo_size_big')
-			+e.city
-				+dropdown({
-					type:'dashed',
-					text:'Москва',
-					icon: {
-						pos:'both',
-						type:'angle-grey',
-						type2:'city'
-						}
-					})
-			+e.enter
-				+btn({href:jv0, value:'Войти'})
-				+btn({href:jv0, value:'Корзина (0)', mod:'_round'})
-				+dropdown({
-					mod:'round',
-					text: '.',
-					icon: {
-						type:'angle-white'
-						}
-					})
-			+e.contacts
-					+dropdown({
-						type:'dashed',
-						text:'Прайс-листы',
-						icon: {
-							pos:'right',
-							type:'angle-grey'
-							}
-						})
-					+dropdown({
-						type:'dashed',
-						text:'Контакты',
-						icon: {
-							pos:'right',
-							type:'angle-grey'
-							}
-						})
-			+e.tel
-				+tel({link: '+74712399911', number:'+7 4712 399-911', text: 'Бесплатно позвонить с сайта'})
-		+row()(class='row_header_menu')
 			+menu(menu)
