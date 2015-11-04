@@ -2,6 +2,7 @@
 	margin-top 50px
 	border-radius 0 0 4px 4px
 	background-color $kz-grey
+	padding-bottom 20px
 
 	&__wrapper
 		max-width 1200px
@@ -39,9 +40,10 @@
 			background $kz-footer-search
 			box-shadow 2.5px 4.33px 16px 0px rgba(255,255,255,0.92)
 			input
-				width 80%
+				width 79%
 			button
-				width 15%
+				padding-left 10px
+				padding-right 10px
 				background $kz-blue
 
 		&_subscribe
@@ -49,25 +51,23 @@
 			padding 12px
 			background $kz-footer-subscribe
 			box-shadow 2.5px 4.33px 16px 0px rgba(255,255,255,0.92)
-			p
-				display inline-block
+			span
 				font-size 12px
 				font-weight 700
 				margin-right 2%
 			input
-				width 54%
+				width 52%
 			button
-				width 16%
 				background $kz-orange
 
 		&_sitemap
-			width 78%
+			width 75%
 			vertical-align top
 
 			.footer__list
 				display inline-block
 				vertical-align top
-				margin-right 45px
+				width 24%
 				font-size 12px
 
 				.footer__title
@@ -86,7 +86,7 @@
 
 
 		&_social
-			width 20%
+			width 25%
 			font-size 0
 
 			.social__link
@@ -127,7 +127,7 @@
 					background $kz-social-rss
 
 		&_cc
-			width 55%
+			width 54%
 			a
 				margin-right 5px
 				color $kz-black
@@ -137,10 +137,10 @@
 
 		&_adress
 			width 20%
-			margin 0 30px
+			margin 0 2%
 
 		&_buymap
-			width 20%
+			width 22%
 			text-align right
 			a
 				text-decoration none
@@ -150,7 +150,7 @@
 			.russia-map_descr
 				display inline-block
 				vertical-align top
-				width 54%
+				width 45%
 				color $kz-black
 				text-align left
 			.comodo_age
@@ -165,3 +165,22 @@
 				background $kz-footer-subscribe
 				padding 5px
 				border-radius 3px
+
+@media screen and (max-width: 992px)
+	.footer
+		
+		&__section
+			
+			&_sitemap
+				width 75%
+			
+			&_social
+				width 25%
+				
+			&_subscribe
+				line-height 10px
+				
+				span
+					display inline-block
+					vertical-align middle
+					width 18%

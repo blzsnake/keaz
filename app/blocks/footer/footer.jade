@@ -1,17 +1,17 @@
 mixin footer()
 	+b.footer
-		+e.wrapper
+		+row
 			+e.block
 				+e.section._search
 					input(type='search', placeholder='поиск по всему сайту')
 					button(type='submit')='Найти'
 				+e.section._subscribe
-					p='Подпишись на новости КЭАЗ'
+					span='Подпишись на новости КЭАЗ'
 					input(type='email' placeholder='e-mail')
 					button(type='submit')='Подписаться'
 			+e.block._center
 				+e.section._sitemap
-					+b.footer__list
+					+e.list
 						+e('p').title
 							+e('a').link(href='#')='Мы производим'
 						+e('ul')
@@ -25,7 +25,7 @@ mixin footer()
 								+e('a').link(href='#')='Преобразователи частоты'
 							+e('li').item
 								+e('a').link(href='#')='Реле контроля и управления'
-					+b.footer__list
+					+e.list
 						+e('p').title
 							+e('a').link(href='#')='Как купить'
 						+e('ul')
@@ -39,7 +39,7 @@ mixin footer()
 								+e('a').link(href='#')='Розничный ассортимент'
 							+e('li').item
 								+e('a').link(href='#')='Направить претензию'
-					+b.footer__list
+					+e.list
 						+e('p').title
 							+e('a').link(href='#')='Наш завод'
 						+e('ul')
@@ -53,7 +53,7 @@ mixin footer()
 								+e('a').link(href='#')='Карьера и вакансии'
 							+e('li').item
 								+e('a').link(href='#')='Патенты'
-					+b.footer__list
+					+e.list
 						+e('p').title
 							+e('a').link(href='#')='Пресс-центр'
 						+e('ul')
@@ -63,8 +63,6 @@ mixin footer()
 								+e('a').link(href='#')='Осторожно, подделка!'
 							+e('li').item
 								+e('a').link(href='#')='Видео'
-							+e('li').item
-								+e#google_translate_element='Google'
 				+e.section._social
 					+b('a').social__link.social__link_vk(href = '#')
 						+e('span')
@@ -106,8 +104,8 @@ mixin footer()
 					p keaz.ru
 				+e.section._buymap
 					a(href = '#')
-						img.russia-map(src="https://keaz.ru/coding/img/allrus.png")
+						img.russia-map(src="../assets/images/allrus.png")
 						p.russia-map_descr Мы работаем по всей России и странам СНГ
 					p.comodo_age
-						img.comodo(src="https://keaz.ru/coding/img/secure.png")
+						img.comodo(src="../assets/images/secure.png")
 						span 18+
