@@ -1,9 +1,19 @@
-include ../blocks/index/index
 
-extends ../blocks/layout-default/layout-default
 
-block head
-	- var pageTitle = 'KEAZ';
+doctype html
+html(lang='ru')
+	include ../blocks/head/head
+	body
+		mixin list(list)
+			.pages
+				.pages__label Готовность
 
-block content
-	+index
+				each item in list
+					a.pages__item(href=item[1] target='_blank')= item[0]
+						.pages__file=item[1]
+						.pages__styles(class='pages__styles_'+item[2])
+		+list([
+			['Главная', 'keaz.html', 'wip'],
+			['UI-Kit', 'ui-kit.html', 'wip'],
+			['Продукция', 'ui-kit.html', 'no']
+		])

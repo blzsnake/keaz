@@ -1,0 +1,49 @@
+.pages
+	width 568px
+	margin 130px auto 0
+	background #ccc
+	font-family sans-serif
+	padding 20px
+
+	&__label
+		font-weight 700
+		text-align center
+		margin-bottom 10px
+		margin-right -16px
+
+	&__item
+		position relative
+		text-decoration none
+		color #231f20
+		display block
+		border 1px solid #231f20
+		width 460px
+		margin-bottom 7px
+		padding 3px 5px
+		background #ccc
+		transition all .3s ease
+
+		&:hover
+			background #ddd
+
+	&__file
+		float right
+
+	&__styles
+		position absolute
+		display block
+		width 55px
+		height 24px
+		top -1px
+		right -72px
+		z-index 2
+		pointer-events none
+
+		&_no
+			background red
+
+		&_wip
+			background yellow
+
+		&_done
+			background green
