@@ -1,17 +1,18 @@
 mixin footer()
 	+b.footer
 		+row
-			+e.block
+			+e.block._top
 				+e.section._search
 					input(type='search', placeholder='поиск по всему сайту')
-					button(type='submit')='Найти'
+					button(type='submit')='Найти'				
 				+e.section._subscribe
 					span='Подпишись на новости КЭАЗ'
 					input(type='email' placeholder='e-mail')
 					button(type='submit')='Подписаться'
 			+e.block._center
 				+e.section._sitemap
-					+e.list
+					+e('p').mobile='Section 1'
+					+e.list#list1
 						+e('p').title
 							+e('a').link(href='#')='Мы производим'
 						+e('ul')
@@ -25,7 +26,8 @@ mixin footer()
 								+e('a').link(href='#')='Преобразователи частоты'
 							+e('li').item
 								+e('a').link(href='#')='Реле контроля и управления'
-					+e.list
+					+e('p').mobile='Section 2'
+					+e.list#list2
 						+e('p').title
 							+e('a').link(href='#')='Как купить'
 						+e('ul')
@@ -39,7 +41,8 @@ mixin footer()
 								+e('a').link(href='#')='Розничный ассортимент'
 							+e('li').item
 								+e('a').link(href='#')='Направить претензию'
-					+e.list
+					+e('p').mobile='Section 3'
+					+e.list#list3
 						+e('p').title
 							+e('a').link(href='#')='Наш завод'
 						+e('ul')
@@ -53,7 +56,8 @@ mixin footer()
 								+e('a').link(href='#')='Карьера и вакансии'
 							+e('li').item
 								+e('a').link(href='#')='Патенты'
-					+e.list
+					+e('p').mobile='Section 4'
+					+e.list#list4
 						+e('p').title
 							+e('a').link(href='#')='Пресс-центр'
 						+e('ul')
@@ -63,6 +67,10 @@ mixin footer()
 								+e('a').link(href='#')='Осторожно, подделка!'
 							+e('li').item
 								+e('a').link(href='#')='Видео'
+
+				+e.mobile-subscribe
+					button(type='submit')='Подписаться на новости КЭАЗ'
+
 				+e.section._social
 					+b('a').social__link.social__link_vk(href = '#')
 						+e('span')

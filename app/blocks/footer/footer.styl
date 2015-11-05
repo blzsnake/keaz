@@ -10,24 +10,33 @@
 
 	&__block
 		font-size 0
+		padding 0 10px
 
 		&_center
 			border-bottom 1px solid black
 			margin-bottom 15px
-			padding 40px 0 20px
+			padding 30px 10px 20px
 
+		&_top
+			padding 0
+			
+	.footer__mobile-subscribe
+		display none
+		
 	&__section
 		display inline-block
 		vertical-align top
 		font-size 12px
 		line-height 1.7em
+		position relative
 		input
 			padding 5px 10px 5px 30px
 			border 0
 		button
+			position absolute
+			right 2%
 			padding 5px
 			border 0
-			margin-left -15px
 			color $kz-white
 			transition all .3s ease-in-out
 			&:hover
@@ -40,10 +49,13 @@
 			background $kz-footer-search
 			box-shadow 2.5px 4.33px 16px 0px rgba(255,255,255,0.92)
 			input
-				width 79%
+				width 82.5%
+				background-image url('../images/icons.png')
+				background-repeat no-repeat
+				background-position 5px 5px
 			button
-				padding-left 10px
-				padding-right 10px
+				padding-left 15px
+				padding-right 15px
 				background $kz-blue
 
 		&_subscribe
@@ -56,7 +68,10 @@
 				font-weight 700
 				margin-right 2%
 			input
-				width 52%
+				width 54%
+				background-image url('../images/fa-envelope.png')
+				background-repeat no-repeat
+				background-position 5px 5px
 			button
 				background $kz-orange
 
@@ -88,6 +103,7 @@
 		&_social
 			width 25%
 			font-size 0
+			text-align right
 
 			.social__link
 				display inline-block
@@ -113,6 +129,7 @@
 
 				&_twitter
 					background $kz-social-tw
+					margin 0 0 10px 0
 
 				&_youtube
 					background $kz-social-yt
@@ -125,6 +142,7 @@
 
 				&_rss
 					background $kz-social-rss
+					margin 0 0 10px 0
 
 		&_cc
 			width 54%
@@ -147,6 +165,8 @@
 			.russia-map
 				width 90px
 				margin-right 17px
+				max-width 100%
+				height auto
 			.russia-map_descr
 				display inline-block
 				vertical-align top
@@ -166,6 +186,9 @@
 				padding 5px
 				border-radius 3px
 
+	&__mobile
+		display none
+
 @media screen and (max-width: 992px)
 	.footer
 		
@@ -179,8 +202,135 @@
 				
 			&_subscribe
 				line-height 10px
+
+				input
+					width 65%
 				
 				span
 					display inline-block
 					vertical-align middle
-					width 18%
+					width 85px
+
+@media screen and (max-width: 768px)
+	.footer
+
+		&__block
+			position relative
+			
+			&_top
+				
+				.footer__section
+					width 100%
+
+					&_search
+						
+						input
+							width 86.5%
+						
+					&_subscribe
+						
+						input
+							width 75%
+								
+		&__section
+
+			&_sitemap
+				width 100%
+			
+			&_cc
+				width 100%
+
+			&_sitemap
+				margin-bottom 20px
+
+			&_social
+				width 34%
+				margin 0 33%
+
+			&_adress
+				width 30%
+				position absolute
+				top -133%
+				left 0
+
+			&_buymap
+				width 30%
+				position absolute
+				top -133%
+				right 0
+
+@media screen and (max-width: 600px)
+	.footer
+					
+		&__mobile
+			display block
+			background-color #e6e8ec
+			color #000
+			font-size 18px
+			border-bottom 1px solid #929caf
+			margin 10px 0
+			padding-left 20px
+			padding-bottom 10px
+			font-weight 700
+			cursor pointer
+
+		.footer__list
+			display none
+			width 100%
+			padding-left 25px
+
+		.footer__mobile-subscribe
+			background-color #9da5b6
+			padding 10px 15px
+			margin-bottom 10px
+			button
+				width 100%
+				font-size 12px
+				padding 0 10px
+				background $kz-orange
+				padding 5px
+				border 0
+				color $kz-white
+				transition all .3s ease-in-out
+				&:hover
+					box-shadow 2.5px 4.33px 16px 0px rgba(255,255,255,0.92)
+					transition all .3s ease-in-out		
+
+		&__section
+
+			&_subscribe
+				display none
+			
+			&_social
+				background-color #fff
+				width 100%
+				margin 0
+				text-align center
+				.social__link
+					margin 10px 55px 10px 0
+					&_twitter
+						margin 0
+					&_rss
+						margin 0
+
+
+			&_adress
+				width 30%
+				position relative
+
+			&_buymap
+				width 100%
+				position absolute
+				top 0
+				left 0
+				text-align center
+				.comodo_age
+					position absolute
+					bottom 0
+					right 0
+
+			&_cc
+				margin-top 65px
+
+			&_adress
+				display none

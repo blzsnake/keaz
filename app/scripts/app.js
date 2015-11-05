@@ -7,4 +7,7 @@ import '../blocks/new-slider/new-slider';
 
 $(() => {
 	// Code here
+	$('.footer__mobile').on('click', function(){
+		$(this).next('div').fadeToggle(500);
+	});
 });
