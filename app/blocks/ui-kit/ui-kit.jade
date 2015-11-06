@@ -108,3 +108,14 @@ mixin ui-kit()
 					+title({tag:'h3', val:'Новости', mod:'small'})
 				+col
 					+title({tag:'h3', val:'Категории', mod:'middle'})
+		
+		+e.row
+			+e.title Filter Buttons
+				+row
+					+col
+						+e.filter-btns
+							button(type="reset" class="reset").
+								Сброс
+							button(type="submit" class="submit").
+								<i class="fa fa-search"></i>
+								Показать
