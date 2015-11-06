@@ -45,7 +45,12 @@ mixin catalog()
 							}
 						})
 			+col(class='col_size_full')
-				+filter
+				+filter([
+			{type:'all',text:'Все бренды',mod:'active'},
+			{type:'keaz',text:'KEAZ'},
+			{type:'keaz',text:'KEAZ Optima'},
+			{type:'optima',text:'KEAZ Ferraz'}
+			],'catalog')
 			+col(class='col_size_full')
 				+link(['#','Продукция','catalog'])
 				+title({tag:'h3', val:'Блочные автоматические выключатели', mod:'middle'})

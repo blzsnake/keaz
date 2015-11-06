@@ -1,7 +1,12 @@
-mixin brand-filter()
+mixin brand-filter(data)
+	-data = data || []
 
 	+b.brand-filter
-		+e.item.brand-filter__item_all.is-active Все бренды
-		+e.item.brand-filter__item_keaz КЭАЗ
-		+e.item.brand-filter__item_keaz КЭАЗ Optima
-		+e.item.brand-filter__item_optima КЭАЗ-Ferraz
+		each item in data
+			+e.item(class={
+			'is-active': item.mod === 'active',
+			'js-list': item.mod === 'list',
+			'brand-filter__item_all': item.type === 'all',
+			'brand-filter__item_keaz': item.type === 'keaz',
+			'brand-filter__item_optima': item.type === 'optima'
+			})= item.text

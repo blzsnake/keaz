@@ -25,9 +25,32 @@ $(() => {
 		} else {
 			$('.js-switch').removeClass(active);
 			$this.addClass(active);
-			$tabs.eq($this.index()).addClass(active);
+			$tabs.removeClass(active)
+			.eq($this.index()).addClass(active);
 		}
 
+	});
+
+	$('.js-list').on('click', function () {
+		var $this = $(this),
+			$lists = $('.catalog-list,.catalog-tile'),
+			$list = $('.catalog-list'),
+			$tile = $('.catalog-tile'),
+			active = 'is-active';
+			console.log($lists, $list, $tile);
+		if ($this.hasClass(active)) {
+			$this.removeClass(active);
+			$lists.removeClass(active);
+		} else {
+			$('.js-list').removeClass(active);
+			$this.addClass(active);
+			$lists.removeClass(active);
+			if ($this.index() === 0) {
+				$list.addClass(active);
+			} else {
+				$tile.addClass(active)
+			}
+		}
 	});
 
 });
