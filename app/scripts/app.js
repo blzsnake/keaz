@@ -6,13 +6,28 @@ import '../blocks/new-slider/new-slider';
 
 
 $(() => {
-	$('.js-filter-option').on('click', function() {
+'use strict';
+	$('.js-filter-option, .js-filter-title').on('click', function() {
 		$(this).toggleClass('is-active');
 	});
 
-	$('.js-toggl').off().on('click', function() {
-		console.log($._data( $(".js-toggl")[0], "events"));
-		$(this).toggleClass('is-active');
+	$('.js-toggl').on('click', function(e) {
+		$(this).closest('.product-toggl').toggleClass('is-active');
+	});
+
+	$('.js-switch').on('click', function () {
+		var $this = $(this),
+			$tabs = $('.tabs__container'),
+			active = 'is-active';
+		if ($this.hasClass(active)) {
+			$this.removeClass(active);
+			$tabs.removeClass(active);
+		} else {
+			$('.js-switch').removeClass(active);
+			$this.addClass(active);
+			$tabs.eq($this.index()).addClass(active);
+		}
 
 	});
+
 });
