@@ -1,0 +1,6 @@
+mixin catalog-list(data)
+	-data = data || []
+	+b('ul').catalog-list
+		each item in data
+			+e('li').item
+				+e.link(href=jv0)= item.text

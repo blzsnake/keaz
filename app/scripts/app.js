@@ -6,5 +6,13 @@ import '../blocks/new-slider/new-slider';
 
 
 $(() => {
-	// Code here
+	$('.js-filter-option').on('click', function() {
+		$(this).toggleClass('is-active');
+	});
+
+	$('.js-toggl').off().on('click', function() {
+		console.log($._data( $(".js-toggl")[0], "events"));
+		$(this).toggleClass('is-active');
+
+	});
 });

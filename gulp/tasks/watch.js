@@ -15,7 +15,6 @@ gulp.task('watch', () => {
 
 	gulp.watch('app/scripts/**/*.js', [
 		'scripts',
-		'lint',
 		reload
 	]);
 

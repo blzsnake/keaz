@@ -1,0 +1,49 @@
+.product-filter
+	padding-top 10px
+	margin-bottom 5px
+	background-color $kz-under-slider
+	border-radius 3px
+
+	&__title
+		padding-left 10px
+		margin-bottom 12px
+		font-size 14px
+		font-weight bold
+
+	&__container
+		padding 10px
+		border-bottom 1px solid $kz-grey
+
+		&:hover
+			background-color $kz-grey-lt
+
+		&:last-of-type
+			border-bottom none
+
+	&__option
+		position relative
+		padding-left 25px
+		font-size 13px
+		cursor pointer
+
+		&::before
+			position absolute
+			top 2px
+			left 0
+			size 6px
+			border-right 2px solid $kz-grey-dk
+			border-bottom 2px solid $kz-grey-dk
+			transform rotate(45deg)
+			transition transform .5s ease
+			content ''
+
+		&.is-active
+
+			&::before
+				transform rotate(225deg)
+
+			.product-filter__value
+				display block
+
+	&__value
+		display none

@@ -1,0 +1,7 @@
+mixin catalog-tile(data)
+	-data = data || []
+	+b.catalog-tile
+		each item in data
+			+e.item
+				+e.img(src=item.img)
+				+e.text(href=item.link)= item.text

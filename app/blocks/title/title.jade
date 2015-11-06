@@ -2,5 +2,6 @@ mixin title(data)
 	-data = data || {}
 
 	+b(data.tag).title(class={
-		'title_size_small': data.mod === 'small'
+		'title_size_small': data.mod === 'small',
+		'title_size_middle': data.mod === 'middle'
 		})&attributes(attributes)= data.val

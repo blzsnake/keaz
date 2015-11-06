@@ -1,0 +1,16 @@
+include ../product-toggl/product-toggl
+
+
+mixin product-filter(data,check)
+	-data = data || {}
+	-check = check || []
+	+b.product-filter
+		+e.title= data.title
+		+e.container
+			each el in check
+			+e.option.js-filter-option= el.opt
+				+e.tooltip
+				+e.value
+					+e.check
+						each item in el.check
+							+product-toggl(item)

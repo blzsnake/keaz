@@ -1,0 +1,98 @@
+include ../row/row
+include ../col/col
+include ../menu/menu
+include ../logo/logo
+include ../btn/btn
+include ../link/link
+include ../content/content
+include ../aside/aside
+include ../dropdown/dropdown
+include ../brand-filter/brand-filter
+include ../title/title
+include ../fake/fake
+include ../text/text
+include ../product-filter/product-filter
+include ../catalog-list/catalog-list
+include ../catalog-tile/catalog-tile
+include ../tabs/tabs
+include ../brand-post/brand-post
+include ../filter/filter
+include ../main-slider/main-slider
+include ../under-slider/under-slider
+include ../new-slider/new-slider
+include ../categories/categories
+include ../footer/footer
+
+
+mixin catalog()
+	- dataCat = getData('categories') || []
+	- dataList = getData('catalog-list') || []
+	- dataTile = getData('catalog-tile') || []
+	+row
+		+content
+			+col(class='col_size_half')
+				+title({tag:'h1', val:'Продукция'})
+			+col(class='col_size_half col_txt_right')
+				+link(['#','Ссылка1'])
+				+link(['#','Ссылка2'])
+				+link(['#','Ссылка3'])
+				+dropdown({
+						type:'blue',
+						text:'Ещё',
+						icon: {
+							pos:'right',
+							type:'angle-grey'
+							}
+						})
+			+col(class='col_size_full')
+				+filter
+			+col(class='col_size_full')
+				+link(['#','Продукция','catalog'])
+				+title({tag:'h3', val:'Блочные автоматические выключатели', mod:'middle'})
+			+tabs
+			+text('Отображено 48 категорий.')
+			+text('Для уточнения характеристик воспользуйтесь фильтром справа.')
+			+catalog-list(getData('catalog-list'))
+			+catalog-tile(dataTile)
+
+		+aside
+			+col(class='col_size_full')
+				+product-filter(
+					{title:'Классификация'},
+					[
+						{
+							opt:'Базовая установка',
+							check:
+								[
+									{label:'да',name:'spec',val:'true'},
+								]
+						}
+					])
+				+product-filter(
+					{title:'Технические характеристики'},
+					[
+						{
+							opt:'Частота тока(Гц)',
+							check:
+								[
+									{label:'50',name:'spec',val:'50'},
+									{label:'400',name:'spec',val:'400'},
+									{label:'50/60',name:'spec',val:'50/60'}
+								]
+						}
+					])
+				+product-filter(
+					{title:'Технические характеристики'},
+					[
+						{
+							opt:'Частота тока(Гц)',
+							check:
+								[
+									{label:'50',name:'spec',val:'50'},
+									{label:'400',name:'spec',val:'400'},
+									{label:'50/60',name:'spec',val:'50/60'}
+								]
+						}
+					])
+
+

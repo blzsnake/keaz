@@ -1,0 +1,4 @@
+mixin product-toggl(data)
+	-data = data || {}
+	+b('label').product-toggl.js-toggl= data.label
+		+e('input').check(type='checkbox' name=data.name value=data.val)

@@ -1,3 +1,5 @@
 mixin link(data)
 	- data = data || []
-	a.link(href=data[0])= data[1]
+	a.link(href=data[0] class={
+		'link_type_catalog': data[2] === 'catalog',
+		})&attributes(attributes)= data[1]
