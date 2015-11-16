@@ -6,9 +6,15 @@
 
 	&__title
 		padding-left 10px
-		margin-bottom 12px
+		padding-bottom 12px
 		font-size 14px
 		font-weight bold
+
+		&:hover
+			color $kz-orange-lt
+
+		&.is-active ~ .product-filter__container
+			display none
 
 	&__container
 		padding 10px

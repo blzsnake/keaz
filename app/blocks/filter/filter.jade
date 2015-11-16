@@ -1,9 +1,9 @@
 include ../dropdown/dropdown
 include ../brand-filter/brand-filter
 
-mixin filter()
+mixin filter(data,catalog)
 	.filter
-		+brand-filter
+		+brand-filter(data)
 		+dropdown({
 			type:'dashed',
 			text:'Сферы применения',
@@ -20,3 +20,8 @@ mixin filter()
 				type:'angle-grey'
 				}
 			})
+
+		if catalog
+			+brand-filter([
+				{type:'all',text:'1',mod:'list'},
+				{type:'optima',text:'2',mod:'list'}])

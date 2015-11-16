@@ -1,4 +1,4 @@
 mixin product-toggl(data)
 	-data = data || {}
-	+b('label').product-toggl.js-toggl= data.label
-		+e('input').check(type='checkbox' name=data.name value=data.val)
+	+b('label').product-toggl= data.label
+		+e('input').check.js-toggl(type='checkbox' name=data.name value=data.val)
