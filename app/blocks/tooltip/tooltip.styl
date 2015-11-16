@@ -1,0 +1,47 @@
+.tooltip
+	margin-left 3px
+	padding-top 1px
+	position relative
+	display inline-block
+	size(11px)
+	font-size 10px
+	font-weight bold
+	color #fff
+	text-align center
+	background-color $kz-orange
+	border-radius 100%
+	cursor pointer
+
+	&:hover
+
+		.tooltip__popup
+			opacity 1
+
+	&_color_grey
+		background-color #9cb6c0
+
+	&__popup
+		position absolute
+		left -43px
+		bottom -42px
+		z-index 2
+		padding 10px
+		min-width 250px
+		text-align left
+		font-size 13px
+		font-weight 300
+		color #000
+		background-color $kz-under-slider
+		opacity 0
+		transition opacity .4s ease
+
+		&:before
+			position absolute
+			top -9px
+			left 50%
+			size 0
+			border-style solid
+			border-width 0 7px 10px 7px
+			border-color transparent transparent $kz-under-slider transparent
+			content ''
+

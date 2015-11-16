@@ -1,12 +1,43 @@
 .brand-post
 	margin-top 30px
 
+	+below(860px)
+		display inline-block
+		width 49%
+		font-size 12px
+		vertical-align top
+
+		+below(760px)
+			width 100%
+
 	&__text
 		margin-top 5px
 		font-size 14px
+
+		+below(860px)
+			font-size 12px
+
+		+below(760px)
+			font-size 3vw
+			max-width 90%
 
 	&__link
 		color $kz-blue-lt
 
 	&__image
 		max-width 72px
+
+.brand-posts
+
+	+below(860px)
+		margin-left 2%
+		margin-top -17px
+		display inline-block
+		width 47%
+		vertical-align top
+
+	+below(760px)
+		margin-top 15px
+		width 100%
+
+

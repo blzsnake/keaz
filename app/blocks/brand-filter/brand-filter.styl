@@ -2,6 +2,18 @@
 	display inline-block
 	font-size 0
 
+	+below(1000px)
+		padding-top .4%
+		float left
+
+	+below(860px)
+		float none
+		padding-top 0
+
+	+below(760px)
+		display block
+		margin-bottom 20px
+
 	&__item
 		padding 5px 10px
 		display inline-block
@@ -9,6 +21,9 @@
 		font-weight bold
 		border 1px solid $kz-grey-dk
 		cursor pointer
+
+		+below(760px)
+			font-size 3.2vw
 
 		&.is-active
 		&:active

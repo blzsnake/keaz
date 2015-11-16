@@ -1,0 +1,9 @@
+include ../blocks/catalog-detailed/catalog-detailed
+
+extends ../blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'KEAZ Каталог';
+
+block content
+	+catalog-detailed

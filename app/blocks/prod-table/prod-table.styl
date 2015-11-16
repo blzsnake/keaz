@@ -1,0 +1,44 @@
+.prod-table
+	display table
+	width 100%
+	font-size 12px
+	text-alight center
+
+	&__row
+		display table-row
+
+		&:hover
+			background-color $kz-grey-lt
+
+		&_type_h
+
+			&:hover
+				background-color #fff
+
+	&__cell
+	&__cell-h
+		display table-cell
+		vertical-align middle
+
+	&__cell
+		height 40px
+		border-bottom 1px solid $kz-grey
+
+		&_type_num
+			width 4%
+			border none
+			color $kz-grey-dk
+
+		&_type_art
+			color $kz-grey-dk
+
+		&_type_name
+			width 40%
+			text-alight left
+
+	&__link
+		text-decoration none
+		color $kz-blue-lt
+
+		&:hover
+			color $kz-orange

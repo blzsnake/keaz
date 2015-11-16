@@ -1,0 +1,37 @@
+.prod-check
+
+	&__check
+		visibility hidden
+
+		&:checked + .prod-check__label::after
+			opacity 1
+
+
+	&__label
+		position relative
+		padding-left 10px
+		font-size 13px
+		color $kz-text
+		cursor pointer
+
+		&::before
+			position absolute
+			left -14px
+			top -2px
+			size 16px
+			border 1px solid $kz-grey-dk
+			background-color #e6e7eb
+			border-radius 4px
+			content ''
+
+		&::after
+			position absolute
+			left -10px
+			top -3px
+			size 8px 13px
+			border-right 2px solid $kz-grey-dk
+			border-bottom 2px solid $kz-grey-dk
+			transform rotate(45deg)
+			content ''
+			opacity 0
+			transition opacity .3s ease

@@ -1,6 +1,9 @@
+include ../row/row
+include ../col/col
+
 mixin footer()
 	+b.footer
-		+e.wrapper
+		+row
 			+e.block
 				+e.section._search
 					input(type='search', placeholder='поиск по всему сайту')
@@ -65,31 +68,31 @@ mixin footer()
 								+e('a').link(href='#')='Видео'
 							+e('li').item
 								+e#google_translate_element='Google'
-				+e.section._social
-					+b('a').social__link.social__link_vk(href = '#')
-						+e('span')
-							i.fa.fa-vk.fa-2x
-					+b('a').social__link.social__link_facebook(href = '#')
-						+e('span')
-							i.fa.fa-facebook.fa-2x
-					+b('a').social__link.social__link_instagram(href = '#')
-						+e('span')
-							i.fa.fa-instagram.fa-2x
-					+b('a').social__link.social__link_twitter(href = '#')
-						+e('span')
-							i.fa.fa-twitter.fa-2x
-					+b('a').social__link.social__link_youtube(href = '#')
-						+e('span')
-							i.fa.fa-youtube.fa-2x
-					+b('a').social__link.social__link_gplus(href = '#')
-						+e('span')
-							i.fa.fa-google-plus.fa-2x
-					+b('a').social__link.social__link_odnoklassniki(href = '#')
-						+e('span')
-							i.fa.fa-odnoklassniki.fa-2x
-					+b('a').social__link.social__link_rss(href = '#')
-						+e('span')
-							i.fa.fa-rss.fa-2x
+					+e.section._social
+						+b('a').social__link.social__link_vk(href = '#')
+							+e('span')
+								i.fa.fa-vk.fa-2x
+						+b('a').social__link.social__link_facebook(href = '#')
+							+e('span')
+								i.fa.fa-facebook.fa-2x
+						+b('a').social__link.social__link_instagram(href = '#')
+							+e('span')
+								i.fa.fa-instagram.fa-2x
+						+b('a').social__link.social__link_twitter(href = '#')
+							+e('span')
+								i.fa.fa-twitter.fa-2x
+						+b('a').social__link.social__link_youtube(href = '#')
+							+e('span')
+								i.fa.fa-youtube.fa-2x
+						+b('a').social__link.social__link_gplus(href = '#')
+							+e('span')
+								i.fa.fa-google-plus.fa-2x
+						+b('a').social__link.social__link_odnoklassniki(href = '#')
+							+e('span')
+								i.fa.fa-odnoklassniki.fa-2x
+						+b('a').social__link.social__link_rss(href = '#')
+							+e('span')
+								i.fa.fa-rss.fa-2x
 			+e.block
 				+e.section._cc
 					p Вся представленная на сайте информация, касающаяся технических характеристик, наличия на складе, стоимости товаров, носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.

@@ -4,6 +4,9 @@
 	&_size_triple
 		width 33.3%
 
+		+below(760px)
+			width 50%
+
 	&_size_half
 		width 50%
 
@@ -12,6 +15,19 @@
 
 	&_txt_right
 		text-align right
+
 	&_txt_center
 		text-align center
 
+	&_txt_just
+		text-align justify
+
+		&:after
+			width 100%
+			display inline-block
+			content ''
+
+	&_type_mobile
+
+		+below(768px)
+			display none

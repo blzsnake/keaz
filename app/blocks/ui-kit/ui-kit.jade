@@ -3,11 +3,15 @@ include ../row/row
 include ../col/col
 include ../menu/menu
 include ../logo/logo
+include ../prod-search/prod-search
+include ../prod-check/prod-check
 include ../btn/btn
 include ../new-slider/new-slider
 include ../dropdown/dropdown
 include ../brand-filter/brand-filter
 include ../title/title
+include ../product-filter/product-filter
+include ../prod-preview/prod-preview
 
 mixin ui-kit()
 	- menu = getData('menu')
@@ -19,6 +23,8 @@ mixin ui-kit()
 		+e.row
 			+e.title Logo
 			+row
+				+col
+					+logo('assets/images/logo_optima.png')(class='logo_size_huge')
 				+col
 					+logo('assets/images/logo.png')(class='logo_size_big')
 				+col
@@ -36,7 +42,9 @@ mixin ui-kit()
 				+col
 					+btn({href:jv0, value:'Подбор по аналогам'})
 				+col
-					+btn({href:jv0, value:'Корзина (0)', mod:'_round'})
+					+btn({href:jv0, value:'Заказать', mod:'square'})
+				+col
+					+btn({href:jv0, value:'Корзина (0)', mod:'round'})
 					+dropdown({
 						mod:'round',
 						text: '.',
@@ -97,7 +105,77 @@ mixin ui-kit()
 			+e.title UI-Components
 			+row
 				+col
-					+brand-filter
+					+prod-check({label:'some Check'})
+			+row
+				+col
+					+prod-search({place:'custom placeholder'})
+			+row
+				+col
+					+brand-filter([
+						{type:'all',text:'1',mod:'list'},
+						{type:'optima',text:'2',mod:'list'}])
+			+row
+				+col
+					+prod-preview(
+						{
+							main:'/assets/images/catalog/tile-1.jpg',
+							dots:[
+								['/assets/images/catalog/tile-1.jpg',1],
+								['/assets/images/catalog/tile-1.jpg',0],
+								['/assets/images/catalog/tile-1.jpg',0]
+							]
+						})
+			+row
+				+col
+					+product-filter
+					+product-filter(
+					{title:'Технические характеристики'},
+					[
+						{
+							opt:'Частота тока(Гц)',
+							check:
+								[
+									{label:'50',name:'spec',val:'50'},
+									{label:'400',name:'spec',val:'400'},
+									{label:'50/60',name:'spec',val:'50/60'}
+								]
+						},
+						{
+							opt:'Частота тока(Гц)',
+							check:
+								[
+									{label:'50',name:'spec',val:'50'},
+									{label:'400',name:'spec',val:'400'},
+									{label:'50/60',name:'spec',val:'50/60'}
+								]
+						},
+						{
+							opt:'Частота тока(Гц)',
+							check:
+								[
+									{label:'50',name:'spec',val:'50'},
+									{label:'400',name:'spec',val:'400'},
+									{label:'50',name:'spec',val:'50'},
+									{label:'400',name:'spec',val:'400'},
+									{label:'50',name:'spec',val:'50'},
+									{label:'AC/DC',name:'spec',val:'400'},
+									{label:'LOnglong long',name:'spec',val:'50'},
+									{label:'400',name:'spec',val:'400'},
+									{label:'50',name:'spec',val:'50'},
+									{label:'400',name:'spec',val:'400'},
+									{label:'50',name:'spec',val:'50'},
+									{label:'400',name:'spec',val:'400'},
+									{label:'50',name:'spec',val:'50'},
+									{label:'400',name:'spec',val:'400'},
+									{label:'50',name:'spec',val:'50'},
+									{label:'400',name:'spec',val:'400'},
+									{label:'50',name:'spec',val:'50'},
+									{label:'400',name:'spec',val:'400'},
+									{label:'50/60',name:'spec',val:'50/60'}
+								]
+						},
+					])
+
 
 		+e.row
 			+e.title Titles
@@ -108,12 +186,12 @@ mixin ui-kit()
 					+title({tag:'h3', val:'Новости', mod:'small'})
 				+col
 					+title({tag:'h3', val:'Категории', mod:'middle'})
-		
+
 		+e.row
 			+e.title Filter Buttons
 				+row
 					+col
-						+e.filter-btns
+						+b.filter-btns
 							button(type="reset" class="reset").
 								Сброс
 							button(type="submit" class="submit").

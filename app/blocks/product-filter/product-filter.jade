@@ -1,15 +1,40 @@
 include ../product-toggl/product-toggl
+include ../tooltip/tooltip
 
 mixin product-filter(data,check)
 	-data = data || {}
 	-check = check || []
-	+b.product-filter
-		+e.title.js-filter-title= data.title
-		each el in check
+	if (data.title)
+		+b.product-filter
+			+e.title.js-filter-title= data.title
+			each el in check
+				+e.container
+					+e.option.js-filter-option= el.opt
+						+e.tooltip
+							+tooltip({text:' Максимальное значение тока короткого замыкания, которое автоматический выключатель способен отключить несколько раз, оставаясь исправным, для переменного тока.'})(class='tooltip_color_grey')
+						+e.value
+							+e.check
+								each item in el.check
+									+product-toggl(item)
+	else
+		+b.product-filter._type_top
+			+e.title Фильтр
 			+e.container
-				+e.option.js-filter-option= el.opt
-					+e.tooltip
-					+e.value
-						+e.check
-							each item in el.check
-								+product-toggl(item)
+				+e.option
+					+e.text Цена, рубль
+					+e.price
+						+e.text От
+						+e.from(type='text' name='from')
+						+e.text До
+						+e.from(type='text' name='to')
+			+e.container
+				+e.option
+					+e.text_indent Складская
+					+product-toggl({label:'да',name:'spec',val:'true'})
+					+product-toggl({label:'нет',name:'spec',val:'false'})
+			+e.container
+				+e.option
+					+e.text._indent В наличие
+					+product-toggl({label:'да',name:'spec',val:'true'})
+					+product-toggl({label:'нет',name:'spec',val:'false'})
+

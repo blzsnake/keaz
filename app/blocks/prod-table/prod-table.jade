@@ -1,0 +1,26 @@
+include ../tooltip/tooltip
+
+mixin prod-table(data)
+	-data = data || {}
+
+	+b.prod-table
+		+e.row._type_h
+			+e.cell._type_num= data.header.num
+			+e.cell-h._type_name= data.header.name
+			+e.cell-h._type_art= data.header.art
+			+e.cell-h._type_exist= data.header.exist
+			+e.cell-h._type_count= data.header.count
+			+e.cell-h._type_price= data.header.price
+			+e.cell-h._type_order= data.header.order
+		each item in data.row
+						+e.row
+							+e.cell._type_num= item.num
+							+e.cell._type_name
+								+e.link(href='#')= item.name
+							+e.cell._type_art= item.art
+							+e.cell._type_exist= item.exist
+								+tooltip({text:'Texttexttext'})
+							+e.cell._type_count= item.count
+							+e.cell._type_price= item.price
+							+e.cell._type_order
+								+btn({href:jv0, value:item.order, mod:'square'})
