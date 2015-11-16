@@ -34,40 +34,67 @@
 				transition all .3s ease-in-out
 
 		&_search
+			height 54px
 			width 50%
-			padding 12px
+			padding 1.5% 1%
 			background $kz-footer-search
 			box-shadow 2.5px 4.33px 16px 0px rgba(255,255,255,0.92)
+			+below(860px)
+				width 100%
 			input
-				width 80%
+				width 78%
 			button
-				width 15%
+				width 14%
 				background $kz-blue
 
 		&_subscribe
 			width 50%
-			padding 12px
+			height 54px
+			padding 1.5% 1%
 			background $kz-footer-subscribe
 			box-shadow 2.5px 4.33px 16px 0px rgba(255,255,255,0.92)
+			+below(860px)
+				width 100%
 			p
 				display inline-block
 				font-size 12px
 				font-weight 700
 				margin-right 2%
+				vertical-align super
+
+				+below(1200px)
+					font-size 1.1vw
+					max-width 20%
+					vertical-align bottom
+					line-height 1.1
+
+				+below(860px)
+					vertical-align super
+
 			input
-				width 54%
+				width 50%
+				vertical-align text-bottom
+				+below(860px)
+					width 61.5%
 			button
-				width 16%
+				width 18%
 				background $kz-orange
+				vertical-align text-bottom
+
 
 		&_sitemap
-			width 78%
+			width 100%
 			vertical-align top
+			text-align justify
+
+			&:after
+				width 100%
+				display inline-block
+				content ''
 
 			.footer__list
 				display inline-block
 				vertical-align top
-				margin-right 45px
 				font-size 12px
 
 				.footer__title
@@ -86,8 +113,13 @@
 
 
 		&_social
-			width 20%
+			max-width 240px
 			font-size 0
+
+			+below(860px)
+				max-width 100%
+				margin-top 2%
+				margin-left 20%
 
 			.social__link
 				display inline-block
@@ -128,6 +160,9 @@
 
 		&_cc
 			width 55%
+
+			+below(1200px)
+				width 100%
 			a
 				margin-right 5px
 				color $kz-black
@@ -139,9 +174,17 @@
 			width 20%
 			margin 0 30px
 
+			+below(1200px)
+				margin-top 15px
+				width 40%
+
 		&_buymap
-			width 20%
+			width 19%
 			text-align right
+
+			+below(1200px)
+				margin-top 15px
+				width 50%
 			a
 				text-decoration none
 			.russia-map

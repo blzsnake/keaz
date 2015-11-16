@@ -1,0 +1,4 @@
+mixin tooltip(data)
+	-data = data || {}
+	+b.tooltip&attributes(attributes) ?
+		+e.popup= data.text

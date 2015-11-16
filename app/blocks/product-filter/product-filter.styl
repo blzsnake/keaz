@@ -4,6 +4,19 @@
 	background-color $kz-under-slider
 	border-radius 3px
 
+	&_type_top
+		.product-filter__container
+			padding-top 0
+
+			&:hover
+				background-color $kz-under-slider
+
+		.product-filter__option
+			&:before
+				display none
+
+
+
 	&__title
 		padding-left 10px
 		padding-bottom 12px
@@ -53,3 +66,22 @@
 
 	&__value
 		display none
+
+	&__text
+		margin-right 5px
+		margin-left 5px
+		display inline
+
+	&__from
+		width 50px
+		border none
+		border-radius 3px
+		line-height 20px
+
+	&__price
+		margin-top 10px
+
+	&__tooltip
+		position absolute
+		right 15px
+		top 0

@@ -1,2 +1,6 @@
 mixin btn(data)
-	a.btn(href = data.href || jv0 class = data.mod ? 'btn'+ data.mod : '')&attributes(attributes)= data.value
+	a.btn(href = data.href || jv0 class ={
+				'btn_round' : data.mod === 'round',
+				'btn_square' : data.mod === 'square'
+
+			})&attributes(attributes)= data.value

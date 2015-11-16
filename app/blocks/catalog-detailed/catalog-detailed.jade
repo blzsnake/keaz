@@ -17,23 +17,27 @@ include ../catalog-tile/catalog-tile
 include ../tabs/tabs
 include ../brand-post/brand-post
 include ../filter/filter
+include ../prod-table/prod-table
 include ../main-slider/main-slider
 include ../under-slider/under-slider
 include ../new-slider/new-slider
 include ../categories/categories
 include ../footer/footer
+include ../prod-preview/prod-preview
 include ../prod-search/prod-search
 include ../prod-check/prod-check
 
 
-mixin catalog()
+mixin catalog-detailed()
 	- dataCat = getData('categories') || []
 	- dataList = getData('catalog-list') || []
 	- dataTile = getData('catalog-tile') || []
+	- dataTable = getData('prod-table') || {}
 	+row
 		+content
 			+col(class='col_size_half')
 				+title({tag:'h1', val:'Продукция'})
+
 			+col(class='col_size_half col_txt_right')
 				+link(['#','Ссылка1'])
 				+link(['#','Ссылка2'])
@@ -46,6 +50,7 @@ mixin catalog()
 							type:'angle-grey'
 							}
 						})
+
 			+col(class='col_size_full')
 				+prod-search({place:'Поиск продукции по названию или артикулу. Можно ввести несколько артикулов через пробел'})
 				+prod-check({label:'Искать в текущей категории'})
@@ -57,15 +62,111 @@ mixin catalog()
 			],'catalog')
 			+col(class='col_size_full')
 				+link(['#','Продукция','catalog'])
+				+link(['#','Блочные автоматические выключатели','catalog'])
 				+title({tag:'h3', val:'Блочные автоматические выключатели', mod:'middle'})
-			+tabs
+				+b.tabs
+					+e.control
+						+e.switch.js-switch
+							+dropdown({
+								type:'dashed',
+								text:'Описание',
+								icon: {
+									pos:'right',
+									type:'angle-grey'
+									}
+								})
+						+e.switch.js-switch
+							+dropdown({
+								type:'dashed',
+								text:'Обозначение',
+								icon: {
+									pos:'right',
+									type:'angle-grey'
+									}
+								})
+						+e.switch.js-switch
+							+dropdown({
+								type:'dashed',
+								text:'Документы',
+								icon: {
+									pos:'right',
+									type:'angle-grey'
+									}
+								})
+						+e.switch.js-switch
+							+dropdown({
+								type:'dashed',
+								text:'Комментарии',
+								icon: {
+									pos:'right',
+									type:'angle-grey'
+									}
+								})
+					+e.container
+						+e('p').text
+							| Блочный автоматический выключатель - это коммутационный аппарат, предназначенный для проведения тока в
+							| нормальном режиме, защиты оборудования и силовой цепи при возникновении перегрузки или короткого замыкания.
+						+e('p').text
+							| In: 0,6 - 2000 А;
+							br
+							| Un: - до 1000 В переменного тока при частоте от 50 до 400 Гц;
+						+e('ul').list
+							+e('li').list-item - до 600 В постоянного тока;
+						+e('p').text Виды расцепителей:
+						+e('ul').list
+							+e('li').list-item - электромагнитные расцепители с гидравлическим замедлением срабатывания;
+							+e('li').list-item - темомагнитные (электромагнитный + тепловой);
+							+e('li').list-item - полупроводниковые расцепители.
+						+e('p').text
+							| Широкий ассортимент аксессуаров, комплектов зажимов и дополнительных устройств.
+					+e.container
+						+e('ul').list
+							+e('li').list-item - до 600 В постоянного тока;
+						+e('p').text Виды расцепителей:
+						+e('ul').list
+							+e('li').list-item - электромагнитные расцепители с гидравлическим замедлением срабатывания;
+							+e('li').list-item - темомагнитные (электромагнитный + тепловой);
+							+e('li').list-item - полупроводниковые расцепители.
+						+e('p').text
+							| Широкий ассортимент аксессуаров, комплектов зажимов и дополнительных устройств.
+					+e.container
+						+e('ul').list
+							+e('li').list-item - до 600 В постоянного тока;
+						+e('p').text Виды расцепителей:
+						+e('ul').list
+							+e('li').list-item - электромагнитные расцепители с гидравлическим замедлением срабатывания;
+							+e('li').list-item - темомагнитные (электромагнитный + тепловой);
+							+e('li').list-item - полупроводниковые расцепители.
+						+e('p').text
+							| Широкий ассортимент аксессуаров, комплектов зажимов и дополнительных устройств.
+					+e.container
+						+e('ul').list
+							+e('li').list-item - до 600 В постоянного тока;
+						+e('p').text Виды расцепителей:
+						+e('ul').list
+							+e('li').list-item - электромагнитные расцепители с гидравлическим замедлением срабатывания;
+							+e('li').list-item - темомагнитные (электромагнитный + тепловой);
+							+e('li').list-item - полупроводниковые расцепители.
+						+e('p').text
+							| Широкий ассортимент аксессуаров, комплектов зажимов и дополнительных устройств.
+
 			+text('Отображено 48 категорий.')
 			+text('Для уточнения характеристик воспользуйтесь фильтром справа.')
-			+catalog-list(getData('catalog-list'))
-			+catalog-tile(dataTile)
+			+col(class='col_size_full')
+				+prod-table(dataTable)
 
 		+aside
 			+col(class='col_size_full')
+				+logo('assets/images/logo_optima.png')(class='logo_size_huge')
+				+prod-preview(
+						{
+							main:'/assets/images/catalog/tile-1.jpg',
+							dots:[
+								['/assets/images/catalog/tile-1.jpg',1],
+								['/assets/images/catalog/tile-1.jpg',0],
+								['/assets/images/catalog/tile-1.jpg',0]
+							]
+						})
 				+product-filter
 				+product-filter(
 					{title:'Классификация'},

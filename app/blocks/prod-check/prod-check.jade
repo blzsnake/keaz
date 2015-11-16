@@ -1,0 +1,5 @@
+mixin prod-check (data)
+	-data = data || {}
+	+b.prod-check
+		+e.check(type='checkbox' name='prod-check' id='prod-check')
+		+e('label').label(label for='prod-check')= data.label
