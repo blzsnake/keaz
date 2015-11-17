@@ -1,0 +1,97 @@
+.under-slider {
+  padding: 25px 30px;
+  border-top: 2px solid $kz-orange;
+  background-color: $kz-under-slider;
+below(760px)
+}
+.links-block {
+  text-align: center;
+below(760px)
+}
+.links-block__top {
+  padding: 20px 0;
+}
+.links-block__outer {
+  font-size: 14px;
+  position: relative;
+  margin: 0 40px;
+below(760px)
+below(760px)
+}
+.links-block__outer_left {
+  margin: 0 40px 0 0;
+}
+.links-block__outer_right {
+  margin: 0 0 0 40px;
+}
+.links-block__link {
+  text-decoration: none;
+  outline: none;
+  color: $kz-blue-lt;
+}
+.links-block__link:hover {
+  color: $kz-orange;
+}
+.links-block__inner {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: -10px;
+  width: 27px;
+  height: 27px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.links-block__inner_solutions {
+  background-image: url("https://keaz.ru/img/links_1.png");
+}
+.links-block__inner_refer {
+  background-image: url("https://keaz.ru/img/links_2.png");
+}
+.links-block__inner_patents {
+  background-image: url("https://keaz.ru/img/links_3.png");
+}
+.links-block__inner_analog {
+  background-image: url("https://keaz.ru/img/links_4.png");
+}
+.news-block {
+  padding-top: 25px;
+  border-top: $kz-blue 1px solid;
+}
+.news-block__title {
+  margin-bottom: 10px;
+}
+.news-block__title-link {
+  display: inline-block;
+  color: $kz-blue-lt;
+  text-decoration: underline;
+  outline: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.news-block__title-link:hover {
+  color: $kz-orange;
+}
+.news-block__title-link_rss {
+  margin-left: 10px;
+  font-size: 20px;
+}
+.news-block__preview {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  font-size: 13px;
+below(760px)
+}
+.news-block__preview_centered {
+  margin: 0 4%;
+}
+.news-block__preview-data {
+  color: $kz-orange;
+}
+.news-block__preview-link {
+  color: $kz-blue-lt;
+  text-decoration: underline;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}

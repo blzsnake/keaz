@@ -56,5 +56,25 @@ mixin header()
 							})
 				+e.tel
 					+tel({link: '+74712399911', number:'+7 4712 399-911', text: 'Бесплатно позвонить с сайта'})
+					button.menu-toggle
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+
+			+col(class='col_size_full')
+				div.mobile-icons
+					div.mobile-geo
+						<i class="fa fa-map-marker"></i> Курск
+					div.mobile-cart
+						a(href="#" class="cart-link")
+							<i class="fa fa-shopping-cart"></i>
+							span.cart-link-counter 3
+
+						a(href="#" class="search-link")
+							<i class="fa fa-search"></i>
+
+
+				
+					
 		+row
 			+menu(menu)

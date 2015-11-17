@@ -26,3 +26,53 @@
 	&__enter
 		.btn:first-child
 			margin-right 8px
+
+.menu-toggle
+	display none
+	height 40px
+	width 40px
+	background-color $kz-orange
+	font-size 0
+	padding 10px
+	.icon-bar
+		display inline-block
+		background-color $kz-white
+		height 2px
+		width 100%
+		&:nth-child(2)
+			margin 3px 0
+			
+
+.mobile-icons
+	display none
+	background $kz-blue
+	color $kz-white
+	padding 10px 0
+	a
+		color $kz-white
+.mobile-geo
+	display inline-block
+	width 50%
+	font-size 32px
+	text-align left
+	padding 0 20px
+
+.mobile-cart
+	display inline-block
+	width 50%
+	font-size 32px
+	text-align right
+	a
+		margin 0 20px
+	.cart-link
+		position relative
+		span
+			position absolute
+			top 3%
+			right -20%
+			background-color $kz-orange
+			color $kz-white
+			display inline-block
+			padding 3px 5px
+			font-size 12px
+			border-radius 100%
