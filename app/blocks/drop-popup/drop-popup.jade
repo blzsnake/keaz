@@ -1,0 +1,19 @@
+mixin drop-popup(data)
+	-data = data || []
+	+b.drop-popup
+		+e('ul').list
+			each item in data
+				if (typeof item === 'string')
+					+e('li').item
+						+e.text= item
+				if (typeof item === 'object')
+					+e('li').item._type_indent
+						+e.text= item.text
+						+e.icon(class = {
+							'drop-popup__icon_type_xls' : item.icon === 'xls',
+							'drop-popup__icon_type_pdf' : item.icon === 'pdf',
+							'drop-popup__icon_type_zip' : item.icon === 'zip'
+							})= item.icon
+						+e.size= item.size
+						+e.date= item.date
+

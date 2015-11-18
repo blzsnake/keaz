@@ -38,22 +38,48 @@ mixin header()
 						})
 			+col(class='col_size_triple col_txt_right')
 				+e.contacts
-						+dropdown({
-							type:'dashed',
-							text:'Прайс-листы',
-							icon: {
-								pos:'right',
-								type:'angle-grey'
+					+dropdown({
+						type:'dashed',
+						text:'Прайс-листы',
+						icon: {
+							pos:'right',
+							type:'angle-grey'
+							},
+						popup:[
+								{
+									text: 'Прайс-лист КЭАЗ',
+									icon: 'xls',
+									size: '9,11 Мб',
+									date: '23 октября'
+								},
+								{
+									text: 'Прайс-лист КЭАЗ',
+									icon: 'zip',
+									size: '9,11 Мб',
+									date: '23 октября'
+								},
+								{
+									text: 'Прайс-лист КЭАЗ',
+									icon: 'pdf',
+									size: '9,11 Мб',
+									date: '23 октября'
 								}
-							})
-						+dropdown({
-							type:'dashed',
-							text:'Контакты',
-							icon: {
-								pos:'right',
-								type:'angle-grey'
-								}
-							})
+							]
+						})
+
+					+dropdown({
+						type:'dashed',
+						text:'Контакты',
+						icon: {
+							pos:'right',
+							type:'angle-grey'
+							},
+						popup:[
+							'Контакты и реквизиты',
+							'Региональные менеджеры',
+							'дилеры'
+							]
+						})
 				+e.tel
 					+tel({link: '+74712399911', number:'+7 4712 399-911', text: 'Бесплатно позвонить с сайта'})
 					button.menu-toggle
@@ -74,7 +100,7 @@ mixin header()
 							<i class="fa fa-search"></i>
 
 
-				
-					
+
+
 		+row
 			+menu(menu)

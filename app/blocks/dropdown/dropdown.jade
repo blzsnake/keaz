@@ -1,9 +1,13 @@
-mixin dropdown(data,icon)
+include ../drop-popup/drop-popup
+
+
+mixin dropdown(data)
 
 	- data = data || {}
 	- icon = data.icon || {}
+	- popup = data.popup || []
 
-	+b.dropdown(class={
+	+b.dropdown.js-dropdown(class={
 			'dropdown_type_round': data.mod === 'round',
 			'dropdown_icon_left': icon.pos === 'left',
 			'dropdown_icon_right': icon.pos === 'right',
@@ -20,7 +24,8 @@ mixin dropdown(data,icon)
 			'dropdown__icon_type_angle-grey' : icon.type === 'angle-grey',
 			'dropdown__icon_type_angle-white' : icon.type === 'angle-white'
 			})
-
+		+e.popup
+			+drop-popup(popup)
 		if icon.type2 != undefined
 			+e.icon(class={
 				'dropdown__icon_type_city' : icon.type2 === 'city',
