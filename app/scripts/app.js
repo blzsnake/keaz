@@ -66,4 +66,15 @@ $(() => {
 		}
 	});
 
+	$('.js-category').on('click', function(e) {
+		var $this = $(this);
+		e.preventDefault();
+		if ($this.hasClass(active)) {
+			$this.removeClass(active);
+		} else {
+			$('.js-category').removeClass(active);
+			$(this).addClass(active);
+		}
+	});
+
 });

@@ -3,6 +3,18 @@ mixin categories(data)
 
 	+b('ul').categories
 		each item in data
-			+e('li').item
-				+e('a').link(href='/catalog.html')= item
-					+e('span').icon
+			if (Array.isArray(item))
+				+e('li').item.js-category
+					+e('a').link(href='/catalog.html')= item[0]
+						+e('span').icon
+					+e('ul').sub
+						each val,index in item
+							if(index != 0)
+								+e('li').item._type_sub
+									+e('a').link(href='/catalog.html')= val
+
+
+			else
+				+e('li').item
+					+e('a').link(href='/catalog.html')= item
+						+e('span').icon
