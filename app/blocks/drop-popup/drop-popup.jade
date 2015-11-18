@@ -8,7 +8,7 @@ mixin drop-popup(data)
 						+e.text= item
 				if (typeof item === 'object')
 					+e('li').item._type_indent
-						+e.text= item.text
+						+e.text(href=jv0)= item.text
 						+e.icon(class = {
 							'drop-popup__icon_type_xls' : item.icon === 'xls',
 							'drop-popup__icon_type_pdf' : item.icon === 'pdf',
