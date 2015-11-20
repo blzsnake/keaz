@@ -8,7 +8,8 @@ mixin drop-basket(data)
 					+e.info
 						+e.top
 							+e('span').id= item.id
-							| #{item.info}
+							span= item.count
+							| &nbsp;#{item.info}
 						+e.down
 							+e.price= item.price
 							+e.date= item.date
