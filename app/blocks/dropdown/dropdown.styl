@@ -8,6 +8,14 @@
 			opacity 1
 			z-index 100
 
+		.dropdown__icon
+			top 9px
+			transform rotate(-135deg)
+
+			&_type_angle-grey
+			&_type_angle-black
+				top 5px
+
 	&_icon_left
 		padding-left 15px
 
@@ -43,6 +51,7 @@
 
 	&__icon
 		position absolute
+		transform rotate(45deg)
 
 		&_type_angle-grey
 			top 1px
@@ -50,7 +59,6 @@
 			size 8px
 			border-right 2px solid $kz-grey-dk
 			border-bottom 2px solid $kz-grey-dk
-			transform rotate(45deg)
 
 		&_type_angle-black
 			top 0
@@ -58,7 +66,6 @@
 			size 9px
 			border-right 2px solid $kz-black
 			border-bottom 2px solid $kz-black
-			transform rotate(45deg)
 
 		&_type_angle-white
 			top 4px
@@ -66,7 +73,6 @@
 			size 9px
 			border-right 2px solid $kz-white
 			border-bottom 2px solid $kz-white
-			transform rotate(45deg)
 
 		&_type_city
 			top 0
@@ -86,7 +92,7 @@
 		font-size 11px
 		text-align left
 		background-color $kz-grey-lt
-		border-radius 3px 3px 0 0
+		border-radius 3px
 		box-shadow 1px 3px 6px rgba(70,70,70,0.2)
 		opacity 0
 		transition opacity .3s ease

@@ -1,0 +1,24 @@
+mixin drop-basket(data)
+	-data = data || []
+
+	+b.drop-basket
+		+e('ul').list
+			each item,key in data
+				+e('li').item
+					+e.info
+						+e.top
+							+e('span').id= item.id
+							| #{item.info}
+						+e.down
+							+e.price= item.price
+							+e.date= item.date
+					+e.check
+						+e.radio(type='radio' name='bascket-check' id='radio'+ key)
+						+e.label(for='radio'+key)
+			+e('li').item._type_last
+				if (data.length > 0)
+					| Создать заказ
+				else
+					| В корзине ничего нет
+
+

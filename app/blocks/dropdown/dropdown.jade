@@ -1,13 +1,16 @@
 include ../drop-popup/drop-popup
+include ../drop-basket/drop-basket
 
 
 mixin dropdown(data)
 
 	- data = data || {}
 	- icon = data.icon || {}
-	- popup = data.popup || []
+	- popup = data.popup
+	- basket = data.basket
 
-	+b.dropdown.js-dropdown(class={
+	+b.dropdown(class={
+			'js-dropdown' : data.popup || data.basket,
 			'dropdown_type_round': data.mod === 'round',
 			'dropdown_icon_left': icon.pos === 'left',
 			'dropdown_icon_right': icon.pos === 'right',
@@ -24,8 +27,12 @@ mixin dropdown(data)
 			'dropdown__icon_type_angle-grey' : icon.type === 'angle-grey',
 			'dropdown__icon_type_angle-white' : icon.type === 'angle-white'
 			})
-		+e.popup
-			+drop-popup(popup)
+		if (popup)
+			+e.popup
+				+drop-popup(popup)
+		if (basket)
+			+e.popup._type_basket
+				+drop-basket(basket)
 		if icon.type2 != undefined
 			+e.icon(class={
 				'dropdown__icon_type_city' : icon.type2 === 'city',
